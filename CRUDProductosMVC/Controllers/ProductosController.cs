@@ -4,7 +4,7 @@ using CRUDProductosMVC.Models;
 
 namespace CRUDProductosMVC.Controllers
 {
-    public class ProductosController : Controller
+    public partial class ProductosController : Controller
     {
         // EDIT - GET
         public ActionResult Edit(int? id)
