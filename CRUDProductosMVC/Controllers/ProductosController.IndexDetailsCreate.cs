@@ -2,13 +2,13 @@
 using System.Net;
 using System.Web.Mvc;
 using CRUDProductosMVC.Models;
+using CRUDProductosMVC.DAL;
 
 namespace CRUDProductosMVC.Controllers
 {
     public partial class ProductosController : Controller
     {
-        private readonly ProductoContext db = new ProductoContext();
-
+        
         // GET: Productos
         public ActionResult Index()
         {
@@ -51,10 +51,6 @@ namespace CRUDProductosMVC.Controllers
             return View(producto);
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing) db.Dispose();
-            base.Dispose(disposing);
-        }
+        
     }
 }
