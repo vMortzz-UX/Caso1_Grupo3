@@ -50,6 +50,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Entity Framework 6 -->
+    <Reference Include="EntityFramework">
+      <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -141,7 +151,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
 
-    <!-- Archivos agregados por Persona 1 -->
+    <!-- Archivos de Persona 1 -->
     <Compile Include="Models\Producto.cs" />
     <Compile Include="DAL\InventarioContext.cs" />
 
