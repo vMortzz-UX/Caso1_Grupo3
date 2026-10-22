@@ -1,0 +1,43 @@
+@model CRUDProductosMVC.Models.Producto
+
+@{
+    ViewBag.Title = "Eliminar producto";
+}
+
+<h2>Eliminar producto</h2>
+
+<h4>¿Está seguro de que desea eliminar este producto?</h4>
+
+<hr />
+
+<dl class="dl-horizontal">
+    <dt>Código</dt>
+    <dd>@Html.DisplayFor(m => m.Codigo)</dd>
+
+    <dt>Nombre</dt>
+    <dd>@Html.DisplayFor(m => m.Nombre)</dd>
+
+    <dt>Categoría</dt>
+    <dd>@Html.DisplayFor(m => m.Categoria)</dd>
+
+    <dt>Precio</dt>
+    <dd>@Html.DisplayFor(m => m.Precio)</dd>
+
+    <dt>Existencia</dt>
+    <dd>@Html.DisplayFor(m => m.Existencia)</dd>
+
+    <dt>Estado</dt>
+    <dd>@(Model.Activo ? "Activo" : "Inactivo")</dd>
+</dl>
+
+@using (Html.BeginForm("Delete", "Productos", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Id)
+
+    <button type="submit" class="btn btn-danger">
+        Sí, eliminar
+    </button>
+
+    @Html.ActionLink("Cancelar", "Index", "Productos", null, new { @class = "btn btn-default" })
+}

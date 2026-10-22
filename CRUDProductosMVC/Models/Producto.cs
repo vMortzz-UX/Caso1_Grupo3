@@ -24,8 +24,8 @@ namespace CRUDProductosMVC.Models
         public string Categoria { get; set; }
 
         [Required(ErrorMessage = "El precio es obligatorio.")]
-        [Range(typeof(decimal), "0.01", "999999999999999",
-            ErrorMessage = "El precio debe ser mayor que cero.")]
+        [Range(0.01, 999999999999999,
+      ErrorMessage = "El precio debe ser mayor que cero.")]
         public decimal Precio { get; set; }
 
         [Range(0, 9999,

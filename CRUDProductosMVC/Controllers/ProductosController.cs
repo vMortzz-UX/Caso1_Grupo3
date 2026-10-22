@@ -5,7 +5,7 @@ using CRUDProductosMVC.Models;
 
 namespace CRUDProductosMVC.Controllers
 {
-    public class ProductosController : Controller
+    public partial class ProductosController : Controller
     {
         private readonly InventarioContext db = new InventarioContext();
 
