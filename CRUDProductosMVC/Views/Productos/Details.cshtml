@@ -1,0 +1,35 @@
+﻿
+@model CRUDProductosMVC.Models.Producto
+
+@{
+    ViewBag.Title = "Detalles del producto";
+}
+
+<h2>Detalles del producto</h2>
+
+<hr />
+
+<dl class="dl-horizontal">
+    <dt>Código</dt>
+    <dd>@Model.Codigo</dd>
+
+    <dt>Nombre</dt>
+    <dd>@Model.Nombre</dd>
+
+    <dt>Categoría</dt>
+    <dd>@Model.Categoria</dd>
+
+    <dt>Precio</dt>
+    <dd>@Model.Precio</dd>
+
+    <dt>Existencia</dt>
+    <dd>@Model.Existencia</dd>
+
+    <dt>Estado</dt>
+    <dd>@(Model.Activo ? "Activo" : "Inactivo")</dd>
+</dl>
+
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Volver al listado", "Index")
+</p>
